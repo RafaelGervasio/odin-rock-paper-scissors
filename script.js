@@ -16,9 +16,19 @@ let player_score = 0;
 
 function playRound(playerSelection, computerSelection){
     computerSelection = getComputerChoice()
-    playerSelection = "Rock";
+    
+    // playerSelection = "Rock";
+    while (playerSelection != 'rock' && playerSelection != "paper" && playerSelection != "scissors")
+    {
+        playerSelection = prompt("Rock, Paper, or Scissors?")
+        playerSelection = playerSelection.toLowerCase()
+    }
 
-    if (playerSelection === "Rock")
+    //Prompt the user
+    //Lowercase their answer
+    //If it's not "rock" "paper" or "scissors" prompt again
+
+    if (playerSelection === "rock")
     {
         if (computerSelection === "Rock")
         {
@@ -36,7 +46,7 @@ function playRound(playerSelection, computerSelection){
         }
     }
 
-    else if (playerSelection === "Paper")
+    else if (playerSelection === "paper")
     {
         if (computerSelection === "Rock")
         {
