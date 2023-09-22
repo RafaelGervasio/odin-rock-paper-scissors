@@ -15,7 +15,6 @@ let computer_score = 0;
 let player_score = 0;
 
 function playRound(playerSelection, computerSelection){
-
     computerSelection = getComputerChoice()
     playerSelection = "Rock";
 
@@ -27,12 +26,12 @@ function playRound(playerSelection, computerSelection){
         }
         else if (computerSelection === "Paper")
         {
-            computer_score+=computer_score
+            computer_score+= 1
             return "You lose! Paper beats rock"
         }
         else
         {
-            player_score+=player_score
+            player_score+= 1
             return "You win! Rock beats scissors"
         }
     }
@@ -41,7 +40,7 @@ function playRound(playerSelection, computerSelection){
     {
         if (computerSelection === "Rock")
         {
-            player_score+=player_score
+            player_score+= 1
             return "You win! Paper beats rock"
         }
         else if (computerSelection === "Paper")
@@ -50,7 +49,7 @@ function playRound(playerSelection, computerSelection){
         }
         else
         {
-            computer_score+=computer_score
+            computer_score+= 1
             return "You lose! Scissors beats paper"
         }
     }
@@ -59,12 +58,12 @@ function playRound(playerSelection, computerSelection){
     {
         if (computerSelection === "Rock")
         {
-            computer_score+=computer_score
+            computer_score+= 1
             return "You lose! Rock beats scissors"
         }
         else if (computerSelection === "Paper")
         {
-            player_score+=player_score
+            player_score+= 1
             return "You win! Scissors beats paper"
         }
         else
@@ -84,7 +83,6 @@ function game(){
         console.log(playRound())
     }
     
-    //THIS RESULTS IS WRONG. It's not displaying corectly
     if (computer_score>player_score)
     {
         console.log("Computer wins the game")
@@ -93,9 +91,11 @@ function game(){
     {
         console.log("Player wins the game")
     }
-    else
+    else if (player_score==computer_score)
     {
         console.log("The game is a draw")
 
     }
+    computer_score = 0;
+    player_score = 0;
 }
