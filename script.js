@@ -1,3 +1,6 @@
+const results = document.querySelector('.results')
+const score = document.querySelector('.score')
+
 function getComputerChoice(){
     
     randomNumber = Math.floor(Math.random() * 3)
@@ -19,28 +22,35 @@ let playerScore = 0;
 function playRound(playerSelection, computerSelection){
     computerSelection = getComputerChoice()
     
-    while (playerSelection != 'rock' && playerSelection != "paper" && playerSelection != "scissors")
-    {
-        playerSelection = prompt("Rock, Paper, or Scissors?")
-        playerSelection = playerSelection.toLowerCase()
-    }
+    // while (playerSelection != 'rock' && playerSelection != "paper" && playerSelection != "scissors")
+    // {
+    //     playerSelection = prompt("Rock, Paper, or Scissors?")
+    //     playerSelection = playerSelection.toLowerCase()
+    // }
 
 
     if (playerSelection === "rock")
     {
         if (computerSelection === "Rock")
         {
-            return "Draw!"
+            const message = document.createElement('p')
+            message.textContent = "Draw!"
+            results.appendChild(message)
+
         }
         else if (computerSelection === "Paper")
         {
             computerScore+= 1
-            return "You lose! Paper beats rock"
+            const message = document.createElement('p')
+            message.textContent = "You lose! Paper beats rock"
+            results.appendChild(message)
         }
         else
         {
             playerScore+= 1
-            return "You win! Rock beats scissors"
+            const message = document.createElement('p')
+            message.textContent = "You win! Rock beats scissors"
+            results.appendChild(message)
         }
     }
 
@@ -49,16 +59,22 @@ function playRound(playerSelection, computerSelection){
         if (computerSelection === "Rock")
         {
             playerScore+= 1
-            return "You win! Paper beats rock"
+            const message = document.createElement('p')
+            message.textContent = "You win! Paper beats rock"
+            results.appendChild(message)
         }
         else if (computerSelection === "Paper")
         {
-            return "Draw!"
+            const message = document.createElement('p')
+            message.textContent = "Draw!"
+            results.appendChild(message)
         }
         else
         {
             computerScore+= 1
-            return "You lose! Scissors beats paper"
+            const message = document.createElement('p')
+            message.textContent = "You lose! Scissors beats paper"
+            results.appendChild(message)
         }
     }
 
@@ -67,16 +83,23 @@ function playRound(playerSelection, computerSelection){
         if (computerSelection === "Rock")
         {
             computerScore+= 1
-            return "You lose! Rock beats scissors"
+            const message = document.createElement('p')
+            message.textContent = "You lose! Rock beats scissors"
+            results.appendChild(message)
         }
         else if (computerSelection === "Paper")
         {
             playerScore+= 1
-            return "You win! Scissors beats paper"
+            const message = document.createElement('p')
+            message.textContent = "You win! Scissors beats paper"
+            results.appendChild(message)
+            
         }
         else
         {
-            return "Draw!"
+            const message = document.createElement('p')
+            message.textContent = "Draw!"
+            results.appendChild(message)
         }
     }
 
@@ -108,3 +131,19 @@ function game(){
     computerScore = 0;
     playerScore = 0;
 }
+
+
+const rock = document.querySelector('#rock')
+rock.addEventListener('click', () => {
+    playRound('rock')
+})
+
+const paper = document.querySelector('#paper')
+paper.addEventListener('click', () =>{
+    playRound('paper')
+})
+
+const scissors = document.querySelector('#scissors')
+scissors.addEventListener('click', () =>{
+    playRound('scissors')
+})
