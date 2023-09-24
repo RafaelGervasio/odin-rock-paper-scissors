@@ -1,3 +1,5 @@
+const Score1 = document.querySelector('.Score1')
+const Score2 = document.querySelector('.Score2')
 const results = document.querySelector('.results')
 const score = document.querySelector('.score')
 
@@ -143,20 +145,29 @@ function playRound(playerSelection, computerSelection){
         }
     }
 
+    const plScore = document.createElement('text')
+    plScore.textContent = `${playerScore}`
+    plScore.classList.add('pltxt')
+    Score1.appendChild(plScore)
 
+    const cpScore = document.createElement('text')
+    cpScore.textContent = `${computerScore}`
+    cpScore.classList.add('cptxt')
+    Score2.appendChild(cpScore)
+
+    if (Score1.childElementCount > 1){
+        Score1.removeChild(Score1.firstElementChild)
+    } 
     
-    const displayScore = document.createElement('p')
-    displayScore.textContent = `${playerScore}  -  ${computerScore}`
-    score.appendChild(displayScore)
-
-    if (score.childElementCount > 1){
-        score.removeChild(score.firstElementChild)
-    }    
+    if (Score2.childElementCount > 1){
+        Score2.removeChild(Score2.firstElementChild)
+    }   
 
     if (computerScore>4 || playerScore>4){
         computerScore = 0
         playerScore = 0
-        score.removeChild(displayScore)
+        Score1.removeChild(plScore)
+        Score2.removeChild(cpScore)
     }
 
 }

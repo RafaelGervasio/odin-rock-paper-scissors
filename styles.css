@@ -57,11 +57,18 @@ button{
     gap: 8px;
 }
 
-.computerScore, .playerScore{
+.Score1, .Score2{
     border: 5px solid black;
-    padding-top: 7px;
-    padding-bottom: 7px;
-    padding-left: 80px;
-    padding-right: 80px;
+    width: 150px;
+    height: 50px;
     font-size: 30px;
+}
+
+
+.pltxt, .cptxt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
 }
