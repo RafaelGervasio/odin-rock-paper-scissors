@@ -1,5 +1,7 @@
 body{
-    background-color: #FFFF00;
+    background-color: #E2B82E;
+    color: white;
+    font-weight: bold;
 }
 
 .header{
@@ -10,22 +12,26 @@ body{
 }
 
 h1{
-    color:lightcoral;
+    color: #333333;
     font-size: 75px;
     margin: 20px;
     margin-top: 40px;
+    font-family: Impact, Charcoal, sans-serif;
+
 }
 
 h2{
-    color: #4169E1;
+    color: #474747;
     font-size: 50px;
     margin: 20px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 h3{
-    color: #0F52BA;
+    color: #5c5c5c;
     font-size: 40px;
     margin: 20px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
 .buttons{
@@ -35,6 +41,10 @@ h3{
     margin-bottom: 20px;
 }
 button{
+    background-color: #B56524;
+    border: 5px solid #693313;
+    color: white;
+    font-weight: bold;
     padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 60px;
@@ -99,4 +109,10 @@ button{
     width: 280px;
     height: 100px;
     font-size: 20px;
+}
+
+
+#label{
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

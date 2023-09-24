@@ -3,6 +3,7 @@ const Score2 = document.querySelector('.Score2')
 const results = document.querySelector('.results')
 const score = document.querySelector('.score')
 
+
 function getComputerChoice(){
     
     randomNumber = Math.floor(Math.random() * 3)
@@ -177,32 +178,6 @@ function playRound(playerSelection, computerSelection){
     }
 
 }
-
-function game(){
-
-    //  Remove the play 5 rounds logic
-    for (let i = 0; i<5; i++)
-    {
-        console.log(playRound())
-    }
-    
-    if (playerScore>computerScore)
-    {
-        console.log("Computer wins the game")
-    }
-    else if (playerScore>computerScore)
-    {
-        console.log("Player wins the game")
-    }
-    else if (playerScore==computerScore)
-    {
-        console.log("The game is a draw")
-
-    }
-    computerScore = 0;
-    playerScore = 0;
-}
-
 
 const rock = document.querySelector('#rock')
 rock.addEventListener('click', () => {
