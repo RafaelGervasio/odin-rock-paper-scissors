@@ -98,10 +98,15 @@ function playRound(playerSelection, computerSelection){
         }
     }
 
+
+    
     const displayScore = document.createElement('p')
     displayScore.textContent = `${playerScore}  -  ${computerScore}`
     score.appendChild(displayScore)
 
+    if (score.childElementCount > 1){
+        score.removeChild(score.firstElementChild)
+    }    
 
 
 }
