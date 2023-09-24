@@ -58,10 +58,17 @@ button{
 }
 
 .Score1, .Score2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+
     border: 5px solid black;
     width: 150px;
     height: 50px;
     font-size: 30px;
+    margin-bottom: 20px;
 }
 
 
@@ -71,4 +78,25 @@ button{
     align-items: center;
     padding: 0;
     margin: 0;
+}
+
+.wrapper2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.results{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    
+    border: 5px solid black;
+    width: 280px;
+    height: 100px;
+    font-size: 20px;
 }

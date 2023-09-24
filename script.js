@@ -49,6 +49,7 @@ function playRound(playerSelection, computerSelection){
             }
             if (computerScore>4 || playerScore>4){
                 message.textContent = "Game over. Computer wins."
+                message.style.color = 'red'
             }
         }
         else
@@ -62,6 +63,7 @@ function playRound(playerSelection, computerSelection){
             }
             if (computerScore>4 || playerScore>4){
                 message.textContent = "Game over. You win!"
+                message.style.color = 'green'
             }
         }
     }
@@ -79,6 +81,7 @@ function playRound(playerSelection, computerSelection){
             }
             if (computerScore>4 || playerScore>4){
                 message.textContent = "Game over. You win!"
+                message.style.color = 'green'
             }
         }
         else if (computerSelection === "Paper")
@@ -101,6 +104,7 @@ function playRound(playerSelection, computerSelection){
             }
             if (computerScore>4 || playerScore>4){
                 message.textContent = "Game over. Computers wins."
+                message.style.color = 'red'
             }
         }
     }
@@ -118,6 +122,7 @@ function playRound(playerSelection, computerSelection){
             }
             if (computerScore>4 || playerScore>4){
                 message.textContent = "Game over. Computers wins."
+                message.style.color = 'red'
             }
         }
         else if (computerSelection === "Paper")
@@ -131,6 +136,7 @@ function playRound(playerSelection, computerSelection){
             }
             if (computerScore>4 || playerScore>4){
                 message.textContent = "Game over. You win!"
+                message.style.color = 'green'
             }
             
         }
