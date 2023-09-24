@@ -86,6 +86,7 @@ function playRound(playerSelection, computerSelection){
 
 function game(){
 
+    //  Remove the play 5 rounds logic
     for (let i = 0; i<5; i++)
     {
         console.log(playRound())
