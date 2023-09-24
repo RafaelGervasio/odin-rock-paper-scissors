@@ -21,7 +21,7 @@ let playerScore = 0;
 
 function playRound(playerSelection, computerSelection){
 
-
+    // const message = document.createElement('p')
     computerSelection = getComputerChoice()
 
     if (playerSelection === "rock")
@@ -31,6 +31,9 @@ function playRound(playerSelection, computerSelection){
             const message = document.createElement('p')
             message.textContent = "Draw!"
             results.appendChild(message)
+            if (results.childElementCount > 1){
+                results.removeChild(results.firstElementChild)
+            } 
 
         }
         else if (computerSelection === "Paper")
@@ -39,6 +42,12 @@ function playRound(playerSelection, computerSelection){
             const message = document.createElement('p')
             message.textContent = "You lose! Paper beats rock"
             results.appendChild(message)
+            if (results.childElementCount > 1){
+                results.removeChild(results.firstElementChild)
+            }
+            if (computerScore>4 || playerScore>4){
+                message.textContent = "Game over. Computer wins."
+            }
         }
         else
         {
@@ -46,6 +55,12 @@ function playRound(playerSelection, computerSelection){
             const message = document.createElement('p')
             message.textContent = "You win! Rock beats scissors"
             results.appendChild(message)
+            if (results.childElementCount > 1){
+                results.removeChild(results.firstElementChild)
+            }
+            if (computerScore>4 || playerScore>4){
+                message.textContent = "Game over. You win!"
+            }
         }
     }
 
@@ -57,12 +72,21 @@ function playRound(playerSelection, computerSelection){
             const message = document.createElement('p')
             message.textContent = "You win! Paper beats rock"
             results.appendChild(message)
+            if (results.childElementCount > 1){
+                results.removeChild(results.firstElementChild)
+            }
+            if (computerScore>4 || playerScore>4){
+                message.textContent = "Game over. You win!"
+            }
         }
         else if (computerSelection === "Paper")
         {
             const message = document.createElement('p')
             message.textContent = "Draw!"
             results.appendChild(message)
+            if (results.childElementCount > 1){
+                results.removeChild(results.firstElementChild)
+            }
         }
         else
         {
@@ -70,6 +94,12 @@ function playRound(playerSelection, computerSelection){
             const message = document.createElement('p')
             message.textContent = "You lose! Scissors beats paper"
             results.appendChild(message)
+            if (results.childElementCount > 1){
+                results.removeChild(results.firstElementChild)
+            }
+            if (computerScore>4 || playerScore>4){
+                message.textContent = "Game over. Computers wins."
+            }
         }
     }
 
@@ -81,6 +111,12 @@ function playRound(playerSelection, computerSelection){
             const message = document.createElement('p')
             message.textContent = "You lose! Rock beats scissors"
             results.appendChild(message)
+            if (results.childElementCount > 1){
+                results.removeChild(results.firstElementChild)
+            }
+            if (computerScore>4 || playerScore>4){
+                message.textContent = "Game over. Computers wins."
+            }
         }
         else if (computerSelection === "Paper")
         {
@@ -88,6 +124,12 @@ function playRound(playerSelection, computerSelection){
             const message = document.createElement('p')
             message.textContent = "You win! Scissors beats paper"
             results.appendChild(message)
+            if (results.childElementCount > 1){
+                results.removeChild(results.firstElementChild)
+            }
+            if (computerScore>4 || playerScore>4){
+                message.textContent = "Game over. You win!"
+            }
             
         }
         else
@@ -95,6 +137,9 @@ function playRound(playerSelection, computerSelection){
             const message = document.createElement('p')
             message.textContent = "Draw!"
             results.appendChild(message)
+            if (results.childElementCount > 1){
+                results.removeChild(results.firstElementChild)
+            }
         }
     }
 
@@ -108,6 +153,11 @@ function playRound(playerSelection, computerSelection){
         score.removeChild(score.firstElementChild)
     }    
 
+    if (computerScore>4 || playerScore>4){
+        computerScore = 0
+        playerScore = 0
+        score.removeChild(displayScore)
+    }
 
 }
 
