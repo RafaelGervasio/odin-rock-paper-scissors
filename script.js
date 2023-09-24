@@ -20,14 +20,9 @@ let computerScore = 0;
 let playerScore = 0;
 
 function playRound(playerSelection, computerSelection){
-    computerSelection = getComputerChoice()
-    
-    // while (playerSelection != 'rock' && playerSelection != "paper" && playerSelection != "scissors")
-    // {
-    //     playerSelection = prompt("Rock, Paper, or Scissors?")
-    //     playerSelection = playerSelection.toLowerCase()
-    // }
 
+
+    computerSelection = getComputerChoice()
 
     if (playerSelection === "rock")
     {
@@ -102,6 +97,10 @@ function playRound(playerSelection, computerSelection){
             results.appendChild(message)
         }
     }
+
+    const displayScore = document.createElement('p')
+    displayScore.textContent = `${playerScore}  -  ${computerScore}`
+    score.appendChild(displayScore)
 
 
 
