@@ -32,11 +32,36 @@ h3{
     display: flex;
     justify-content: center;
     gap: 8px;
+    margin-bottom: 20px;
 }
 button{
     padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 60px;
     padding-right: 60px;
+    font-size: 30px;
+}
+
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.player, .computer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.computerScore, .playerScore{
+    border: 5px solid black;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 80px;
+    padding-right: 80px;
     font-size: 30px;
 }
